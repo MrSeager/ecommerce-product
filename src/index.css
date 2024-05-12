@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Kumbh+Sans:400,700&display=swap');
+@import "~react-image-gallery/styles/css/image-gallery.css";
 
 body {
   margin: 0;
@@ -23,7 +24,7 @@ code {
   position: absolute;
   background-color: hsl(220, 14%, 75%);
   bottom: 0;
-  left: 3%;
+  left: 5%;
 }
 
 .cs-nav-link{
@@ -61,4 +62,132 @@ code {
 
 .cs-avatar:hover{
   outline: solid 2px hsl(26, 100%, 55%);
+}
+
+.cs-tc{
+  color: hsl(26, 100%, 55%) !important;
+}
+
+.cs-tc-2{
+  color: hsl(219, 9%, 45%) !important;
+}
+
+.cs-tc-3{
+  color: hsl(220, 14%, 75%) !important;
+}
+
+.cs-badge{
+  background-color: hsl(25, 100%, 94%);
+  color: hsl(26, 100%, 55%) !important;
+}
+
+.cs-btn{
+  color: hsl(26, 100%, 55%) !important;
+}
+
+.cs-btn:hover{
+  color: hsl(26, 100%, 75%) !important;
+}
+
+.cs-btn-2{
+  background-color: hsl(26, 100%, 55%) !important;
+  color: white !important;
+}
+
+.cs-btn-2:hover{
+  background-color: hsl(26, 100%, 75%) !important;
+}
+
+.cs-bg{
+  background-color: hsl(223, 64%, 98%) !important;
+}
+
+.cs-image{
+  filter: brightness(0) invert(1);
+}
+
+.cs-img-class img{
+  border-radius: 25px;
+}
+
+.cs-thumbnail-class{
+  border-radius: 18px;
+  margin: 0 25px;
+}
+
+.cs-thumbnail-class img{
+  border-radius: 15px;
+  width: 100%;
+  transition: .3s;
+}
+
+.cs-thumbnail-class, .cs-thumbnail-class:hover{
+  border: solid 3px transparent;
+}
+
+.cs-thumbnail-class.active{
+  border: solid 3px hsl(26, 100%, 55%);
+}
+
+.cs-thumbnail-class:hover img{
+  opacity: .5;
+}
+
+.cs-bborder{
+  border-bottom: solid 1px hsl(220, 14%, 75%);;
+}
+
+.cs-grid{
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 5% 2%;
+  align-items: center;
+}
+
+.cs-grid p{
+  font-size: 13px;
+  margin: 0;
+}
+
+.cs-gr-2{
+  grid-row: span 2;
+}
+
+.cs-w{
+  width: 700% !important;
+}
+
+.cs-w-2{
+  width: 90%;
+}
+
+.cs-toggle::after {
+  display: none !important;
+  position: relative !important;
+}
+
+.cs-badge-2{
+  position: absolute !important;
+  background-color: hsl(26, 100%, 55%);
+  top: 0;
+  right: 0;
+  font-size: 10px !important;
+}
+
+.cs-w-3{
+  width: 25%;
+}
+
+.cs-w-4{
+  width: 75%;
+}
+
+@media (max-width: 992px){
+  .cs-w-3{
+    width: 100%;
+  }
+  
+  .cs-w-4{
+    width: 100%;
+  }
 }
