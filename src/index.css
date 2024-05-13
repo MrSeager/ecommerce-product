@@ -106,13 +106,24 @@ code {
   filter: brightness(0) invert(1);
 }
 
+.image-gallery {
+  width: 95%;
+  margin: auto;
+}
+
+
+.cs-img-class{
+  border-radius: 35px;
+}
+
 .cs-img-class img{
-  border-radius: 25px;
+  border-radius: 35px;
 }
 
 .cs-thumbnail-class{
   border-radius: 18px;
   margin: 0 25px;
+  width: 20%;
 }
 
 .cs-thumbnail-class img{
@@ -188,6 +199,13 @@ code {
   }
   
   .cs-w-4{
+    width: 100%;
+  }
+
+  .cs-nav-link:hover.cs-nav-link::before{
+    display: none;
+  }
+  .image-gallery {
     width: 100%;
   }
 }

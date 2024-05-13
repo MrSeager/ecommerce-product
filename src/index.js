@@ -98,7 +98,7 @@ const MainSite = () => {
   return (
     <main>
       <Navbar expand='lg' className='p-3 cs-line'>
-        <Container className='justify-content-center align-items-top w-50'>
+        <Container fluid className='d-flex flex-row justify-content-center align-items-top w-50'>
           <Navbar.Brand href='#home'>
             <Image fluid src={ImgLogo} alt='logo' className='m-3 px-0 ps-lg-5' />
           </Navbar.Brand>
@@ -113,7 +113,7 @@ const MainSite = () => {
             </Nav>
           </Navbar.Collapse>
         </Container>
-        <Container className='w-50 align-self-start justify-content-end'>
+        <Container fluid className='d-flex flex-row w-50 align-self-start justify-content-end'>
           <Dropdown  className=''
                      align='end'>
             <Dropdown.Toggle variant='custom'
@@ -148,9 +148,9 @@ const MainSite = () => {
             </Navbar.Brand>
           </Container>
       </Navbar>
-      <Container>
+      <Container fluid className=''>
         <Row className='p-5 gap-5'>
-          <Col  lg={6} className=''>
+          <Col lg={6}>
             <MyGallery />
           </Col>
           <Col  lg={5} className='d-flex flex-column justify-content-center'>
@@ -181,27 +181,15 @@ const MainSite = () => {
 
 class MyGallery extends React.Component{
   render () {
-    if (window.innerWidth >= 992)
-      {
-    return <ImageGallery 
+      return <ImageGallery 
               items={images}
               useBrowserFullscreen={false}
-              showNav={false}
+              showNav={window.innerWidth >= 992 ? false : true}
               showPlayButton={false}
-              showFullscreenButton={true}
-              showThumbnails={true}
-            />
-      } else {
-        return <ImageGallery 
-              items={images}
-              useBrowserFullscreen={false}
-              showNav={true}
-              showPlayButton={false}
-              showFullscreenButton={false}
-              showThumbnails={false}
-            />
-      }
-  }
+              showFullscreenButton={window.innerWidth >= 992 ? true : false}
+              showThumbnails={window.innerWidth >= 992 ? true : false}
+              />
+          }
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
